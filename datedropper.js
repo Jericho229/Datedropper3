@@ -1340,7 +1340,7 @@
 			return get_picker_els('ul.pick[data-k="'+k+'"]');
 		},
 		get_eq = function(k,d) {
-			ul = get_ul(k);
+			var ul = get_ul(k);
 			var
 				o = [];
 
@@ -1420,7 +1420,7 @@
 			//CURRENT VALUE
 			pickers[picker.id].key[k].current = key_values.today < key_values.min && key_values.min || key_values.today;
 
-			for (i = key_values.min; i <= key_values.max; i++) {
+			for (var i = key_values.min; i <= key_values.max; i++) {
 				var
 					html = i;
 
